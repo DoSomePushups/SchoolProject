@@ -50,7 +50,10 @@ scoreChange();
 
 snakediv.addEventListener("click", () => {
   snakepath = "no";
-  window.location.href = "/SecretSnake/index.html";
+  localStorage.setItem("snakepath", JSON.stringify(snakepath));
+  setTimeout(() => {
+    window.location.href = "/SecretSnake/index.html";
+  }, 1000);
 });
 
 startButtonJS.addEventListener("click", () => {
