@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playground</title>
+    <link rel="stylesheet" href="/playground.css" />
+  </head>
+  <body id="body">
+    <div id="timer">00:00</div>
+    <div id="menuandscore">
+      <div id="mainmenu"><p id="gotomainmenu">Go to main&nbsp;screen</p></div>
+      <div id="score">
+        <p id="bestscoretext">Best Score: 0</p>
+        <p id="scoretext">Score: 0</p>
+        <p id="showmode">Gamemode:</p>
+      </div>
+    </div>
+
+    <div id="central">
+      <div id="words">Ready?</div>
+      <div id="answer">
+        <input id="answerInput" type="text" placeholder="Answer" />
+      </div>
+      <div id="submit"><button id="submitbutton">Submit</button></div>
+      <div id="answers">
+        <p id="wordpar">Word:</p>
+        <p id="youranswer">Your answer:</p>
+        <p id="rightanswer">Right answer:</p>
+      </div>
+      <div id="rightdiv" class="none">
+        <button id="itwasright">My answer was right!</button>
+        <p id="rightp">
+          (press this, if you are absolutely sure, <br />
+          that your answer was right)
+        </p>
+      </div>
+    </div>
+
+    <script src="/playground.js"></script>
+  </body>
+</html>

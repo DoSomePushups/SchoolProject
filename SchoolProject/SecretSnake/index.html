@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="Snake.css" />
+  </head>
+  <body>
+    <div id="gameContainer">
+      <div id="gameMenu">
+        <p id="menu">Menu</p>
+        <div id="menu-1">
+          <div id="difficultyChoose" class="buttonsDiv none">
+            <button id="superEasy" class="menu-button">SUPER EASY</button
+            ><button id="easy" class="menu-button">EASY</button
+            ><button id="medium" class="menu-button">MEDIUM</button
+            ><button id="hard" class="menu-button">HARD</button>
+            <p id="showDifficulty">Your difficulty: EASY</p>
+          </div>
+
+          <div id="yourHighestScore" class="none">
+            <p id="highScoreShow">Your highest score = 0</p>
+            <p>Custom gamemode scores doesnt count!</p>
+            <p>Creator: Stepan Busygin</p>
+          </div>
+
+          <div id="colorMenu" class="none">
+            <p>
+              Choose your snake head color:
+              <input id="colorInputHead" type="color" />
+            </p>
+            <p>
+              Choose your snake body color:
+              <input id="colorInputBody" type="color" />
+            </p>
+            <p>
+              Choose your snake tail color:
+              <input id="colorInputTail" type="color" />
+            </p>
+            <p>
+              Choose color of the food:
+              <input id="colorInputFood" type="color" />
+            </p>
+          </div>
+
+          <div id="createOwnGameMenu" class="none">
+            <div class="choosen">
+              <p>Unit Size:</p>
+              <input id="US50" type="radio" name="unitsizeInput" value="50" />
+              50
+              <input id="US25" type="radio" name="unitsizeInput" value="25" />
+              25
+              <input id="US20" type="radio" name="unitsizeInput" value="20" />
+              20
+              <input id="US10" type="radio" name="unitsizeInput" value="10" />
+              10
+              <input id="defaultUS" type="radio" name="unitsizeInput" checked />
+              Default
+            </div>
+            <div class="choosen">
+              <p>Number of food:</p>
+              <input
+                type="radio"
+                id="NOF5"
+                name="numberoffoodInput"
+                value="5"
+              />
+              5
+              <input
+                type="radio"
+                id="NOF4"
+                name="numberoffoodInput"
+                value="4"
+              />
+              4
+              <input
+                type="radio"
+                id="NOF3"
+                name="numberoffoodInput"
+                value="3"
+              />
+              3
+              <input
+                type="radio"
+                id="NOF2"
+                name="numberoffoodInput"
+                value="2"
+              />
+              2
+              <input
+                type="radio"
+                id="NOF1"
+                name="numberoffoodInput"
+                value="1"
+              />
+              1
+              <input
+                checked
+                type="radio"
+                id="defaultNOF"
+                name="numberoffoodInput"
+              />
+              Default
+            </div>
+
+            <div class="choosen">
+              <p>Speed:</p>
+              <input type="radio" id="SA4" name="speedAmount" value="25" />
+              4
+              <input type="radio" id="SA3" name="speedAmount" value="50" />
+              3
+              <input type="radio" id="SA2" name="speedAmount" value="75" />
+              2
+              <input type="radio" id="SA1" name="speedAmount" value="100" />
+              1
+              <input checked type="radio" id="defaultSA" name="speedAmount" />
+              Default
+            </div>
+          </div>
+
+          <div id="DCHC" class="buttonsDiv">
+            <button id="difficulty" class="menu-button">Difficulty</button>
+            <button id="colors" class="menu-button">Colors</button>
+            <button id="highestScore" class="menu-button">Highest score</button>
+            <button id="create" class="menu-button">Create gamemode</button>
+            <p id="hint">Hint: You can use menu <br />as a pause</p>
+          </div>
+
+          <div id="apply-div">
+            <button id="apply" class="menu-button">
+              Apply <br />
+              <span id="spanApply">(A)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <canvas id="gameBoard" width="500" height="500"></canvas>
+      <div id="scoreText">0</div>
+      <div id="SMR">
+        <div id="controller">
+          <button class="arrow-button" id="arrowUp">&uarr;</button>
+          <div id="controller2">
+            <button class="arrow-button" id="arrowLeft">&larr;</button
+            ><button class="arrow-button" id="arrowDown">&darr;</button
+            ><button class="arrow-button" id="arrowRight">&rarr;</button>
+          </div>
+        </div>
+
+        <button id="start">
+          START <br />
+          <span id="span-space">(space)</span>
+        </button>
+        <div id="menuAndReset">
+          <button id="openMenu">
+            Menu <br /><span class="span-menu-reset">(M)</span>
+          </button>
+          <button id="reset">
+            Reset <br />
+            <span class="span-menu-reset">(R)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="Snake.js"></script>
+  </body>
+</html>
